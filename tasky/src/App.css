@@ -84,6 +84,12 @@ h1 {
   color: #63748b;
 }
 
+.card-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
 .priority-badge {
   display: inline-flex;
   align-items: center;
@@ -109,7 +115,6 @@ h1 {
 }
 
 .doneButton {
-  margin-top: 20px;
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
@@ -123,4 +128,20 @@ h1 {
 
 .doneButton:hover {
   background: #15803d;
+}
+
+.deleteButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #b91c1c;
 }

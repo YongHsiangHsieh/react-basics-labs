@@ -8,7 +8,15 @@ const formatPriority = (priority) => {
   return priority.charAt(0).toUpperCase() + priority.slice(1);
 };
 
-const Task = ({ title, deadline, description, priority, done, markDone }) => {
+const Task = ({
+  title,
+  deadline,
+  description,
+  priority,
+  done,
+  markDone,
+  deleteTask,
+}) => {
   const priorityLabel = formatPriority(priority);
 
   return (
@@ -24,9 +32,14 @@ const Task = ({ title, deadline, description, priority, done, markDone }) => {
       <div className="card-body">
         <p className="deadline-label">Due: {deadline}</p>
         {description && <p className="task-description">{description}</p>}
-        <button onClick={markDone} className="doneButton">
-          Done
-        </button>
+        <div className="card-actions">
+          <button onClick={markDone} className="doneButton">
+            Done
+          </button>
+          <button className="deleteButton" onClick={deleteTask}>
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );
