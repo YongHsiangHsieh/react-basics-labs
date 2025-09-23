@@ -52,6 +52,18 @@ h1 {
   color: #475569;
 }
 
+.card-priority-low {
+  border-top: 6px solid #27ae60;
+}
+
+.card-priority-medium {
+  border-top: 6px solid #f39c12;
+}
+
+.card-priority-high {
+  border-top: 6px solid #d64541;
+}
+
 .title {
   font-weight: 600;
   font-size: 1.15em;
@@ -147,7 +159,8 @@ h1 {
 }
 
 input[type="text"],
-input[type="date"] {
+input[type="date"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

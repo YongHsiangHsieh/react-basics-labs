@@ -36,6 +36,7 @@ function App() {
     title: "",
     description: "",
     deadline: "",
+    priority: "medium",
   });
 
   const doneHandler = (taskIndex) => {
@@ -64,6 +65,9 @@ function App() {
       case "deadline":
         form.deadline = event.target.value;
         break;
+      case "priority":
+        form.priority = event.target.value;
+        break;
       default:
         form = formState;
     }
@@ -79,6 +83,7 @@ function App() {
     const form = { ...formState };
 
     form.id = uuidv4();
+    form.done = false;
 
     tasks.push(form);
     setTaskState({ tasks });

@@ -18,9 +18,11 @@ const Task = ({
   deleteTask,
 }) => {
   const priorityLabel = formatPriority(priority);
+  const priorityClass = priority ? ` card-priority-${priority}` : "";
+  const cardClassName = `card${done ? " card-done" : ""}${priorityClass}`;
 
   return (
-    <div className={`card${done ? " card-done" : ""}`}>
+    <div className={cardClassName}>
       <div className="card-header">
         <p className="title">{title}</p>
         {priorityLabel && (
