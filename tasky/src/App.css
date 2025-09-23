@@ -2,48 +2,102 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background: #f5f6fb;
+  color: #2c3e50;
+  margin: 0;
 }
 
 h1 {
   text-align: center;
-  background-color: grey;
+  background-color: #4b5563;
   color: white;
-  padding: 14px 20px;
+  padding: 16px 28px;
   margin: 8px 0;
   border: none;
-  border-radius: 4px;
-}
-
-div {
-  padding: 20px;
+  border-radius: 8px;
 }
 
 .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px;
   text-align: center;
+}
+
+.card-list {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
 }
 
 .card {
-  display: inline-block;
-  vertical-align: top;
-  font-family: system-ui;
-  background: #5bb4c4;
-  color: white;
-  text-align: center;
-  width: 180px;
-  height: 240px;
-  margin: 10px;
-  padding: 10px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: white;
+  color: inherit;
+  width: 220px;
+  min-height: 200px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow: 0 16px 24px rgba(15, 23, 42, 0.08);
+  text-align: left;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 1.15em;
+  margin: 0;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-body {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.deadline-label {
+  margin: 0;
+  color: #4a5568;
+  font-weight: 500;
 }
 
 .task-description {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 0.95em;
   line-height: 1.4;
-  color: #f4faff;
+  color: #63748b;
+}
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.priority-high {
+  background: #d64541;
+}
+
+.priority-medium {
+  background: #f39c12;
+}
+
+.priority-low {
+  background: #27ae60;
 }
